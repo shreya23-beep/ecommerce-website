@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Shop - Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2>E-Shop</h2>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="orders.html">My Orders</a>
+      <a href="auth.html" id="auth-link">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div style="margin-bottom: 1rem;">
+      <a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: 500;">&larr; Back to Products</a>
+    </div>
+    <div id="product-details" class="card" style="max-width: 600px; margin: 0 auto;">
+      <p style="padding: 1.5rem;">Loading product details...</p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    loadProductDetails();
+    updateCartCount();
+    checkAuthStatus();
+  </script>
+</body>
+</html>

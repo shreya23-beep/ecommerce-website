@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Shop - Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2>E-Shop</h2>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="orders.html">My Orders</a>
+      <a href="auth.html" id="auth-link">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Your Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <tr>
+          <td colspan="5" style="text-align: center;">Loading cart...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem;">
+      <a href="index.html" class="btn btn-secondary">&larr; Continue Shopping</a>
+      <div style="text-align: right;">
+        <h3 id="cart-total" style="margin-bottom: 0.75rem;">Total: $0.00</h3>
+        <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    renderCart();
+    checkAuthStatus();
+  </script>
+</body>
+</html>

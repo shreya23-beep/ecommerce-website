@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Access</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2>E-Shop</h2>
+    <nav><a href="index.html">Back to Store</a></nav>
+  </header>
+  <div class="container" style="max-width: 400px; margin-top: 3rem;">
+    <div class="card" style="padding: 1.5rem;">
+      <h2 id="form-title" style="margin-bottom: 1.5rem;">Login</h2>
+      <form onsubmit="handleAuth(event)">
+        <div class="form-group" id="name-group" style="display: none;">
+          <label>Full Name</label>
+          <input type="text" id="name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit" class="btn" id="submit-btn" style="width: 100%;">Login</button>
+      </form>
+      <p style="margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+        <a href="#" onclick="toggleAuthMode()" id="toggle-link">Don't have an account? Register</a>
+      </p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
